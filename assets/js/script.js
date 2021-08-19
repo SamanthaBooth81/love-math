@@ -41,20 +41,19 @@ function runGame(gameType) {
 function checkAnswer() {
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculatedAnswer = calculateCorrectAnswer(); 
-    let isCorrect = userAnswer === calculatedAnswer[0]; 
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
-        alert=("Hey! You got it right! :D")
+        alert("Hey! You got it right! :D");
         incrementScore();
     } else {
-        alert(`Awww... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}`);
+        alert(`Awwww.... you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
         incrementWrongAnswer();
     }
-
 }
 
-runGame(calculatedAnswer[1]);
+    runGame(calculatedAnswer[1]);
 
 /**
  * Gets the operands (the numbers) and the operator (plus, minus etc) 
